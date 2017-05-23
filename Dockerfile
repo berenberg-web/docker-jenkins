@@ -1,4 +1,4 @@
-FROM openjdk:8u121-jdk
+FROM openjdk:8u131-jdk
 
 # Install git, sendmail
 RUN apt-get update -qq \
@@ -45,7 +45,7 @@ COPY tcp-slave-agent-port.groovy executors.groovy ${JENKINS_INSTALL_DIR}/ref/ini
 
 # Install Jenkins
 ENV COPY_REFERENCE_FILE_LOG=${JENKINS_HOME}/copy_reference_file.log \
-    JENKINS_VERSION=2.61
+    JENKINS_VERSION=2.62
 
 COPY jenkins-support jenkins.sh docker-entrypoint.sh /usr/local/bin/
 
