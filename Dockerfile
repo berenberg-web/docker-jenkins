@@ -45,7 +45,7 @@ COPY tcp-slave-agent-port.groovy executors.groovy ${JENKINS_INSTALL_DIR}/ref/ini
 
 # Install Jenkins
 ENV COPY_REFERENCE_FILE_LOG=${JENKINS_HOME}/copy_reference_file.log \
-    JENKINS_VERSION=2.63
+    JENKINS_VERSION=2.64
 
 COPY jenkins-support jenkins.sh docker-entrypoint.sh /usr/local/bin/
 
